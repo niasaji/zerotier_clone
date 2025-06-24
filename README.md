@@ -1,17 +1,17 @@
 # VSwitch - Virtual Ethernet Switch
 A lightweight virtual Ethernet switch implementation that connects multiple virtual network interfaces over UDP.
 
-## Architecture
+### Architecture
 [VM/Container] <-> [TAP Device] <-> [VPort] <-> [UDP] <-> [VSwitch] <-> [UDP] <-> [VPort] <-> [TAP Device] <-> [VM/Container]
 
-## Components
+### Components
 
 VSwitch `(vswitch.py)` - Learning Ethernet switch with MAC address table  
 VPort `(vport.c)` - Virtual port that bridges TAP devices to VSwitch via UDP  
 TAP Utils `(tap_utils.c/h)` - TAP device creation and management  
 Setup Script `(setup.sh)` - Network interface configuration  
 
-## Quick Start
+### Quick Start
 1. Compile VPort
 ```bash
 gcc -o vport vport.c tap_utils.c -lpthread
